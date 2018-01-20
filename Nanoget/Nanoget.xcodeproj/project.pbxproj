@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24274F8F2006BC2F00E47ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24274F8E2006BC2F00E47ED6 /* AppDelegate.swift */; };
+		24274F912006BC2F00E47ED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24274F902006BC2F00E47ED6 /* ViewController.swift */; };
+		24274F932006BC2F00E47ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24274F922006BC2F00E47ED6 /* Assets.xcassets */; };
+		24274F962006BC2F00E47ED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24274F942006BC2F00E47ED6 /* Main.storyboard */; };
+		24274FA22006BC3000E47ED6 /* NanogetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24274FA12006BC3000E47ED6 /* NanogetTests.swift */; };
+		24274FAD2006BC3000E47ED6 /* NanogetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24274FAC2006BC3000E47ED6 /* NanogetUITests.swift */; };
+		24274FBB2006BC8900E47ED6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 24274FBA2006BC8900E47ED6 /* Podfile */; };
+		24274FBC2006BD3B00E47ED6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24274FBE2006BD3B00E47ED6 /* Alamofire.framework */; };
+		24274FBD2006BD3B00E47ED6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24274FBF2006BD3B00E47ED6 /* SwiftyJSON.framework */; };
+		24274FC12006CF7C00E47ED6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24274FC02006CF7C00E47ED6 /* MainView.swift */; };
+		3125DBE1CCCF367D8BADCB0F /* Pods_Nanoget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF8E3320A904AA295A26E37 /* Pods_Nanoget.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24274F9E2006BC3000E47ED6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24274F832006BC2E00E47ED6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24274F8A2006BC2E00E47ED6;
+			remoteInfo = Nanoget;
+		};
+		24274FA92006BC3000E47ED6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24274F832006BC2E00E47ED6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24274F8A2006BC2E00E47ED6;
+			remoteInfo = Nanoget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24274F8B2006BC2E00E47ED6 /* Nanoget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nanoget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24274F8E2006BC2F00E47ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		24274F902006BC2F00E47ED6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24274F922006BC2F00E47ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24274F952006BC2F00E47ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		24274F972006BC2F00E47ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24274F982006BC2F00E47ED6 /* Nanoget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nanoget.entitlements; sourceTree = "<group>"; };
+		24274F9D2006BC3000E47ED6 /* NanogetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanogetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24274FA12006BC3000E47ED6 /* NanogetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanogetTests.swift; sourceTree = "<group>"; };
+		24274FA32006BC3000E47ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24274FA82006BC3000E47ED6 /* NanogetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanogetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24274FAC2006BC3000E47ED6 /* NanogetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanogetUITests.swift; sourceTree = "<group>"; };
+		24274FAE2006BC3000E47ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24274FBA2006BC8900E47ED6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		24274FBE2006BD3B00E47ED6 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24274FBF2006BD3B00E47ED6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24274FC02006CF7C00E47ED6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2DF8E3320A904AA295A26E37 /* Pods_Nanoget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nanoget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		847B6B8AA054F03D425D4941 /* Pods-Nanoget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nanoget.debug.xcconfig"; path = "Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget.debug.xcconfig"; sourceTree = "<group>"; };
+		C13C6385C52F2E7DB1F8A45B /* Pods-Nanoget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nanoget.release.xcconfig"; path = "Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24274F882006BC2E00E47ED6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24274FBC2006BD3B00E47ED6 /* Alamofire.framework in Frameworks */,
+				24274FBD2006BD3B00E47ED6 /* SwiftyJSON.framework in Frameworks */,
+				3125DBE1CCCF367D8BADCB0F /* Pods_Nanoget.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24274F9A2006BC2F00E47ED6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24274FA52006BC3000E47ED6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24274F822006BC2E00E47ED6 = {
+			isa = PBXGroup;
+			children = (
+				24274F8D2006BC2E00E47ED6 /* Nanoget */,
+				24274FA02006BC3000E47ED6 /* NanogetTests */,
+				24274FAB2006BC3000E47ED6 /* NanogetUITests */,
+				24274F8C2006BC2E00E47ED6 /* Products */,
+				76C996E6564CA422EFF029DF /* Pods */,
+				D8A657EA9E93947AA48914ED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		24274F8C2006BC2E00E47ED6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24274F8B2006BC2E00E47ED6 /* Nanoget.app */,
+				24274F9D2006BC3000E47ED6 /* NanogetTests.xctest */,
+				24274FA82006BC3000E47ED6 /* NanogetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24274F8D2006BC2E00E47ED6 /* Nanoget */ = {
+			isa = PBXGroup;
+			children = (
+				24274F8E2006BC2F00E47ED6 /* AppDelegate.swift */,
+				24274F902006BC2F00E47ED6 /* ViewController.swift */,
+				24274F922006BC2F00E47ED6 /* Assets.xcassets */,
+				24274F942006BC2F00E47ED6 /* Main.storyboard */,
+				24274FC02006CF7C00E47ED6 /* MainView.swift */,
+				24274FBA2006BC8900E47ED6 /* Podfile */,
+				24274F972006BC2F00E47ED6 /* Info.plist */,
+				24274F982006BC2F00E47ED6 /* Nanoget.entitlements */,
+			);
+			path = Nanoget;
+			sourceTree = "<group>";
+		};
+		24274FA02006BC3000E47ED6 /* NanogetTests */ = {
+			isa = PBXGroup;
+			children = (
+				24274FA12006BC3000E47ED6 /* NanogetTests.swift */,
+				24274FA32006BC3000E47ED6 /* Info.plist */,
+			);
+			path = NanogetTests;
+			sourceTree = "<group>";
+		};
+		24274FAB2006BC3000E47ED6 /* NanogetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				24274FAC2006BC3000E47ED6 /* NanogetUITests.swift */,
+				24274FAE2006BC3000E47ED6 /* Info.plist */,
+			);
+			path = NanogetUITests;
+			sourceTree = "<group>";
+		};
+		76C996E6564CA422EFF029DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				847B6B8AA054F03D425D4941 /* Pods-Nanoget.debug.xcconfig */,
+				C13C6385C52F2E7DB1F8A45B /* Pods-Nanoget.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D8A657EA9E93947AA48914ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24274FBE2006BD3B00E47ED6 /* Alamofire.framework */,
+				24274FBF2006BD3B00E47ED6 /* SwiftyJSON.framework */,
+				2DF8E3320A904AA295A26E37 /* Pods_Nanoget.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24274F8A2006BC2E00E47ED6 /* Nanoget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24274FB12006BC3000E47ED6 /* Build configuration list for PBXNativeTarget "Nanoget" */;
+			buildPhases = (
+				10C31EF146038EDB51F00686 /* [CP] Check Pods Manifest.lock */,
+				24274F872006BC2E00E47ED6 /* Sources */,
+				24274F882006BC2E00E47ED6 /* Frameworks */,
+				24274F892006BC2E00E47ED6 /* Resources */,
+				B5CFD3F48A88A97704F54673 /* [CP] Embed Pods Frameworks */,
+				2B07668CFB173DEEE565F56C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nanoget;
+			productName = Nanoget;
+			productReference = 24274F8B2006BC2E00E47ED6 /* Nanoget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		24274F9C2006BC2F00E47ED6 /* NanogetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24274FB42006BC3000E47ED6 /* Build configuration list for PBXNativeTarget "NanogetTests" */;
+			buildPhases = (
+				24274F992006BC2F00E47ED6 /* Sources */,
+				24274F9A2006BC2F00E47ED6 /* Frameworks */,
+				24274F9B2006BC2F00E47ED6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24274F9F2006BC3000E47ED6 /* PBXTargetDependency */,
+			);
+			name = NanogetTests;
+			productName = NanogetTests;
+			productReference = 24274F9D2006BC3000E47ED6 /* NanogetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		24274FA72006BC3000E47ED6 /* NanogetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24274FB72006BC3000E47ED6 /* Build configuration list for PBXNativeTarget "NanogetUITests" */;
+			buildPhases = (
+				24274FA42006BC3000E47ED6 /* Sources */,
+				24274FA52006BC3000E47ED6 /* Frameworks */,
+				24274FA62006BC3000E47ED6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24274FAA2006BC3000E47ED6 /* PBXTargetDependency */,
+			);
+			name = NanogetUITests;
+			productName = NanogetUITests;
+			productReference = 24274FA82006BC3000E47ED6 /* NanogetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24274F832006BC2E00E47ED6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Carspotter Daily";
+				TargetAttributes = {
+					24274F8A2006BC2E00E47ED6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					24274F9C2006BC2F00E47ED6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 24274F8A2006BC2E00E47ED6;
+					};
+					24274FA72006BC3000E47ED6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 24274F8A2006BC2E00E47ED6;
+					};
+				};
+			};
+			buildConfigurationList = 24274F862006BC2E00E47ED6 /* Build configuration list for PBXProject "Nanoget" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24274F822006BC2E00E47ED6;
+			productRefGroup = 24274F8C2006BC2E00E47ED6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24274F8A2006BC2E00E47ED6 /* Nanoget */,
+				24274F9C2006BC2F00E47ED6 /* NanogetTests */,
+				24274FA72006BC3000E47ED6 /* NanogetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24274F892006BC2E00E47ED6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24274FBB2006BC8900E47ED6 /* Podfile in Resources */,
+				24274F932006BC2F00E47ED6 /* Assets.xcassets in Resources */,
+				24274F962006BC2F00E47ED6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24274F9B2006BC2F00E47ED6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24274FA62006BC3000E47ED6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10C31EF146038EDB51F00686 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2B07668CFB173DEEE565F56C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CFD3F48A88A97704F54673 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24274F872006BC2E00E47ED6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24274F912006BC2F00E47ED6 /* ViewController.swift in Sources */,
+				24274FC12006CF7C00E47ED6 /* MainView.swift in Sources */,
+				24274F8F2006BC2F00E47ED6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24274F992006BC2F00E47ED6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24274FA22006BC3000E47ED6 /* NanogetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24274FA42006BC3000E47ED6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24274FAD2006BC3000E47ED6 /* NanogetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24274F9F2006BC3000E47ED6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24274F8A2006BC2E00E47ED6 /* Nanoget */;
+			targetProxy = 24274F9E2006BC3000E47ED6 /* PBXContainerItemProxy */;
+		};
+		24274FAA2006BC3000E47ED6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24274F8A2006BC2E00E47ED6 /* Nanoget */;
+			targetProxy = 24274FA92006BC3000E47ED6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		24274F942006BC2F00E47ED6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24274F952006BC2F00E47ED6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24274FAF2006BC3000E47ED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		24274FB02006BC3000E47ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		24274FB22006BC3000E47ED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 847B6B8AA054F03D425D4941 /* Pods-Nanoget.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Nanoget/Nanoget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
+				INFOPLIST_FILE = Nanoget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Carspotter.Nanoget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		24274FB32006BC3000E47ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C13C6385C52F2E7DB1F8A45B /* Pods-Nanoget.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Nanoget/Nanoget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
+				INFOPLIST_FILE = Nanoget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Carspotter.Nanoget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		24274FB52006BC3000E47ED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
+				INFOPLIST_FILE = NanogetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Carspotter.NanogetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nanoget.app/Contents/MacOS/Nanoget";
+			};
+			name = Debug;
+		};
+		24274FB62006BC3000E47ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
+				INFOPLIST_FILE = NanogetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Carspotter.NanogetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nanoget.app/Contents/MacOS/Nanoget";
+			};
+			name = Release;
+		};
+		24274FB82006BC3000E47ED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
+				INFOPLIST_FILE = NanogetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Carspotter.NanogetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Nanoget;
+			};
+			name = Debug;
+		};
+		24274FB92006BC3000E47ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
+				INFOPLIST_FILE = NanogetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Carspotter.NanogetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Nanoget;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24274F862006BC2E00E47ED6 /* Build configuration list for PBXProject "Nanoget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24274FAF2006BC3000E47ED6 /* Debug */,
+				24274FB02006BC3000E47ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24274FB12006BC3000E47ED6 /* Build configuration list for PBXNativeTarget "Nanoget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24274FB22006BC3000E47ED6 /* Debug */,
+				24274FB32006BC3000E47ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24274FB42006BC3000E47ED6 /* Build configuration list for PBXNativeTarget "NanogetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24274FB52006BC3000E47ED6 /* Debug */,
+				24274FB62006BC3000E47ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24274FB72006BC3000E47ED6 /* Build configuration list for PBXNativeTarget "NanogetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24274FB82006BC3000E47ED6 /* Debug */,
+				24274FB92006BC3000E47ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24274F832006BC2E00E47ED6 /* Project object */;
+}

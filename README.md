@@ -1,4 +1,5 @@
 # NanoGet
+[![Build Status](https://travis-ci.org/HudsonGraeme/NanoGet.svg?branch=master)](https://travis-ci.org/HudsonGraeme/NanoGet)
 ## Simple Design
 Enter your wallet address and go!
 - Automatically detects your currency

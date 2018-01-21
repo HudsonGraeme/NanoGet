@@ -718,15 +718,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yEN-L7-JwS">
-                                <rect key="frame" x="150" y="126" width="181" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ETH Address" id="Lck-ik-dSM">
-                                    <font key="font" size="29" name="ArialMT"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kd1-fU-jig">
                                 <rect key="frame" x="127" y="18" width="227" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -750,6 +741,15 @@ DQ
                                     <action selector="Btn:" target="XfG-lQ-9wD" id="SHh-Tp-MIp"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yEN-L7-JwS">
+                                <rect key="frame" x="142" y="126" width="197" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Wallet Address" id="Lck-ik-dSM">
+                                    <font key="font" size="29" name="ArialMT"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -767,7 +767,7 @@ DQ
         <scene sceneID="a7J-ag-3BT">
             <objects>
                 <viewController title="NanoGet" id="ihT-N0-Jlf" customClass="MainView" customModule="Nanoget" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m8S-mm-2hW">
+                    <view key="view" wantsLayer="YES" id="m8S-mm-2hW">
                         <rect key="frame" x="0.0" y="0.0" width="725" height="575"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -813,20 +813,25 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ks5-U2-x7g">
-                                <rect key="frame" x="18" y="538" width="689" height="17"/>
+                                <rect key="frame" x="18" y="539" width="689" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="ETH Amount" id="HKB-68-SAX">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Currency" id="HKB-68-SAX">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="p6D-UB-fiz">
+                                <rect key="frame" x="346" y="272" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </progressIndicator>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="ETHAmnt" destination="ks5-U2-x7g" id="zzc-r1-1Or"/>
-                        <outlet property="ETHLvl" destination="hTI-OO-Dib" id="d3C-8u-tL6"/>
-                        <outlet property="mhs" destination="Xk1-vC-E4r" id="QY2-EQ-hbP"/>
+                        <outlet property="LoadInd" destination="p6D-UB-fiz" id="QST-bS-bRl"/>
+                        <outlet property="Lvl" destination="hTI-OO-Dib" id="Vco-0j-hnm"/>
+                        <outlet property="LvlLabel" destination="ks5-U2-x7g" id="aZr-kn-HuJ"/>
+                        <outlet property="RepHash" destination="Xk1-vC-E4r" id="JQL-wJ-nXQ"/>
                     </connections>
                 </viewController>
                 <customObject id="7fu-cX-bB1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

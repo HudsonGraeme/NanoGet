@@ -26,21 +26,53 @@ class ViewController: NSViewController {
 
     @IBAction func Btn(_ sender: Any) {
         if(Addr.stringValue.count == 42) {
-            Addr.textColor = NSColor.black
+            Addr.textColor = NSColor.orange
             Addr.stringValue = Addr.stringValue.replacingOccurrences(of: "0x", with: "")
-            Go(Addr.stringValue)
+            HandleCoins(suspectedCoin: "eth")
         }
         else if(Addr.stringValue.count == 40&&Addr.stringValue.contains("0x") != true){
+            Addr.textColor = NSColor.orange
+            HandleCoins(suspectedCoin: "eth")
+        }
+        else if(Addr.stringValue.count == 76) {
+            Addr.textColor = NSColor.green
+            HandleCoins(suspectedCoin: "sia")
+        }
+        else if(Addr.stringValue.count == 8) {
+            Addr.textColor = NSColor.yellow
+            HandleCoins(suspectedCoin: "pasc")
+        }
+        else if(Addr.stringValue.count > 95) {
             Addr.textColor = NSColor.black
-            Go(Addr.stringValue)
+            HandleCoins(suspectedCoin: "etn")
+        }
+        else if(Addr.stringValue.count == 95) {
+            Addr.textColor = NSColor.gray
+            HandleCoins(suspectedCoin: "xmr")
+        }
+        else if(Addr.stringValue.count == 35) {
+            Addr.textColor = NSColor.systemBlue
+            HandleCoins(suspectedCoin: "zec")
         }
         else {
             Addr.textColor = NSColor.red
             Addr.stringValue = "Invalid Address"
         }
     }
-    func Go(_ Address:String) {
-        Alamofire.request("https://api.nanopool.org/v1/eth/balance/\(Address)") .responseJSON { response in
+    
+    func HandleCoins(suspectedCoin coin:String) {
+        if(coin == "eth"){
+            Go(Addr.stringValue, coin)
+            Go(Addr.stringValue, "etc")
+        }
+        else {
+        Go(Addr.stringValue, coin)
+        }
+    }
+    var canload: Bool = false
+    func Go(_ Address:String, _ coin: String){
+        UserDefaults.standard.set(Address, forKey: "Acc")
+        Alamofire.request("https://api.nanopool.org/v1/\(coin)/balance/\(Address)") .responseJSON { response in
             let data = response.data
             if(response.result.isSuccess) {
                 if let result = response.result.value {
@@ -48,18 +80,30 @@ class ViewController: NSViewController {
                     
                     let json = JSON(data: data!)
                     if(json["status"].intValue == 1) {
-                        UserDefaults.standard.set(Address, forKey: "Acc")
-                        self.performSegue(withIdentifier:NSStoryboardSegue.Identifier(rawValue: "ToMain"), sender: self)
+                        self.canload = true
+                        self.YorN(coin)
                     }
                     else {
-                        print("Bad address")
+                        self.canload = false
+                      self.YorN(coin)
                     }
 
                 }
             }
             else {
                 print("Failure")
+                self.canload = false
+                self.YorN(coin)
             }
+        }
+    }
+    func YorN(_ coin: String) {
+        if(self.canload == true) {
+            UserDefaults.standard.set(coin, forKey: "Coin")
+            self.performSegue(withIdentifier:NSStoryboardSegue.Identifier(rawValue: "ToMain"), sender: self)
+        }
+        else {
+            print("nope")
         }
     }
 }

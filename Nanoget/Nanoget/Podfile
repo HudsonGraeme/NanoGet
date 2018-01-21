@@ -1,6 +1,6 @@
 platform :osx, '10.12'
 use_frameworks!
-project 'Nanoget.xcodeproj'
+project '/Users/gra/Documents/Nanoget/Nanoget.xcodeproj'
 target 'Nanoget' do
   pod 'Alamofire'
   pod 'SwiftyJSON'

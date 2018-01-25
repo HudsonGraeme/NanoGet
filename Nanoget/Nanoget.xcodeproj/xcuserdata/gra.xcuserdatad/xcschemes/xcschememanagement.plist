@@ -7,7 +7,25 @@
 		<key>Nanoget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>24274F8A2006BC2E00E47ED6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24274F9C2006BC2F00E47ED6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24274FA72006BC3000E47ED6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

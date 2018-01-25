@@ -17,7 +17,8 @@
 		24274FBC2006BD3B00E47ED6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24274FBE2006BD3B00E47ED6 /* Alamofire.framework */; };
 		24274FBD2006BD3B00E47ED6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24274FBF2006BD3B00E47ED6 /* SwiftyJSON.framework */; };
 		24274FC12006CF7C00E47ED6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24274FC02006CF7C00E47ED6 /* MainView.swift */; };
-		3125DBE1CCCF367D8BADCB0F /* Pods_Nanoget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF8E3320A904AA295A26E37 /* Pods_Nanoget.framework */; };
+		24DE9977201515DE00EC31FF /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DE9978201515DE00EC31FF /* Charts.framework */; };
+		792FB820A3A16AF5FA8E9E59 /* Pods_Nanoget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9065CDF7D4701ACF1BFA0674 /* Pods_Nanoget.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AC222A0817D4CBE7A31F430 /* Pods-Nanoget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nanoget.debug.xcconfig"; path = "Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget.debug.xcconfig"; sourceTree = "<group>"; };
 		24274F8B2006BC2E00E47ED6 /* Nanoget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nanoget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24274F8E2006BC2F00E47ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24274F902006BC2F00E47ED6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,13 +53,13 @@
 		24274FA82006BC3000E47ED6 /* NanogetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanogetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24274FAC2006BC3000E47ED6 /* NanogetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanogetUITests.swift; sourceTree = "<group>"; };
 		24274FAE2006BC3000E47ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24274FBA2006BC8900E47ED6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		24274FBA2006BC8900E47ED6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		24274FBE2006BD3B00E47ED6 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24274FBF2006BD3B00E47ED6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24274FC02006CF7C00E47ED6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		2DF8E3320A904AA295A26E37 /* Pods_Nanoget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nanoget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		847B6B8AA054F03D425D4941 /* Pods-Nanoget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nanoget.debug.xcconfig"; path = "Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget.debug.xcconfig"; sourceTree = "<group>"; };
-		C13C6385C52F2E7DB1F8A45B /* Pods-Nanoget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nanoget.release.xcconfig"; path = "Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget.release.xcconfig"; sourceTree = "<group>"; };
+		24DE9978201515DE00EC31FF /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9065CDF7D4701ACF1BFA0674 /* Pods_Nanoget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nanoget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FADDB64A26121DCF65CBE0FA /* Pods-Nanoget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nanoget.release.xcconfig"; path = "Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +67,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DE9977201515DE00EC31FF /* Charts.framework in Frameworks */,
 				24274FBC2006BD3B00E47ED6 /* Alamofire.framework in Frameworks */,
 				24274FBD2006BD3B00E47ED6 /* SwiftyJSON.framework in Frameworks */,
-				3125DBE1CCCF367D8BADCB0F /* Pods_Nanoget.framework in Frameworks */,
+				792FB820A3A16AF5FA8E9E59 /* Pods_Nanoget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +98,8 @@
 				24274FA02006BC3000E47ED6 /* NanogetTests */,
 				24274FAB2006BC3000E47ED6 /* NanogetUITests */,
 				24274F8C2006BC2E00E47ED6 /* Products */,
-				76C996E6564CA422EFF029DF /* Pods */,
 				D8A657EA9E93947AA48914ED /* Frameworks */,
+				A142902DAA5305C23CD26C6C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,11 +146,11 @@
 			path = NanogetUITests;
 			sourceTree = "<group>";
 		};
-		76C996E6564CA422EFF029DF /* Pods */ = {
+		A142902DAA5305C23CD26C6C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				847B6B8AA054F03D425D4941 /* Pods-Nanoget.debug.xcconfig */,
-				C13C6385C52F2E7DB1F8A45B /* Pods-Nanoget.release.xcconfig */,
+				1AC222A0817D4CBE7A31F430 /* Pods-Nanoget.debug.xcconfig */,
+				FADDB64A26121DCF65CBE0FA /* Pods-Nanoget.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -155,9 +158,10 @@
 		D8A657EA9E93947AA48914ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24DE9978201515DE00EC31FF /* Charts.framework */,
 				24274FBE2006BD3B00E47ED6 /* Alamofire.framework */,
 				24274FBF2006BD3B00E47ED6 /* SwiftyJSON.framework */,
-				2DF8E3320A904AA295A26E37 /* Pods_Nanoget.framework */,
+				9065CDF7D4701ACF1BFA0674 /* Pods_Nanoget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,12 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24274FB12006BC3000E47ED6 /* Build configuration list for PBXNativeTarget "Nanoget" */;
 			buildPhases = (
-				10C31EF146038EDB51F00686 /* [CP] Check Pods Manifest.lock */,
+				ED4363AA889631D759D96F13 /* [CP] Check Pods Manifest.lock */,
 				24274F872006BC2E00E47ED6 /* Sources */,
 				24274F882006BC2E00E47ED6 /* Frameworks */,
 				24274F892006BC2E00E47ED6 /* Resources */,
-				B5CFD3F48A88A97704F54673 /* [CP] Embed Pods Frameworks */,
-				2B07668CFB173DEEE565F56C /* [CP] Copy Pods Resources */,
+				4603159942C16308AD4E6DB0 /* [CP] Embed Pods Frameworks */,
+				9F3C65975D7164B39EC33BEB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,22 +299,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10C31EF146038EDB51F00686 /* [CP] Check Pods Manifest.lock */ = {
+		4603159942C16308AD4E6DB0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2B07668CFB173DEEE565F56C /* [CP] Copy Pods Resources */ = {
+		9F3C65975D7164B39EC33BEB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -325,19 +336,22 @@
 			shellScript = "\"${SRCROOT}/Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B5CFD3F48A88A97704F54673 /* [CP] Embed Pods Frameworks */ = {
+		ED4363AA889631D759D96F13 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nanoget-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Nanoget/Pods/Target Support Files/Pods-Nanoget/Pods-Nanoget-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -504,10 +518,10 @@
 		};
 		24274FB22006BC3000E47ED6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 847B6B8AA054F03D425D4941 /* Pods-Nanoget.debug.xcconfig */;
+			baseConfigurationReference = 1AC222A0817D4CBE7A31F430 /* Pods-Nanoget.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Nanoget/Nanoget.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
@@ -515,16 +529,17 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Carspotter.Nanoget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		24274FB32006BC3000E47ED6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C13C6385C52F2E7DB1F8A45B /* Pods-Nanoget.release.xcconfig */;
+			baseConfigurationReference = FADDB64A26121DCF65CBE0FA /* Pods-Nanoget.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Nanoget/Nanoget.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
@@ -532,6 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Carspotter.Nanoget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

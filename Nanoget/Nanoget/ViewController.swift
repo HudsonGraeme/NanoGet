@@ -21,8 +21,25 @@ class ViewController: NSViewController {
         if let acc = UserDefaults.standard.string(forKey: "Acc") {
             Addr.stringValue = acc
         }
-
+let area = NSTrackingArea.init(rect: Btn.bounds, options: [.mouseEnteredAndExited, .activeAlways], owner: self, userInfo: nil)
+        Btn.addTrackingArea(area)
+        self.Btn.wantsLayer = true
+        self.Btn.layer?.backgroundColor = NSColor.systemBlue.cgColor
+        self.view.wantsLayer = true
+        self.view.layer?.backgroundColor = NSColor.lightGray.cgColor
     }
+    
+    override func mouseEntered(with event: NSEvent) {
+        print("Entered: \(event)")
+        self.Btn.layer?.backgroundColor = NSColor.blue.blended(withFraction: 0.5, of: .systemBlue)?.cgColor
+    }
+    
+    override func mouseExited(with event: NSEvent) {
+        print("Exited: \(event)")
+        self.Btn.layer?.backgroundColor = NSColor.systemBlue.cgColor
+        
+    }
+    
 
     @IBAction func Btn(_ sender: Any) {
         if(Addr.stringValue.count == 42) {

@@ -7,7 +7,7 @@ Enter your wallet address and go!
 - Automatically saves your account for next time
 
 ## Work in Progress
-If you have any suggestions or ideas, feel free to [email me](mailto:spencer@carspotter.ca) or open an issue
+If you have any suggestions or ideas, feel free to [email me](mailto:spencer@carspotter.ca) or [open an issue](https://github.com/HudsonGraeme/NanoGet/issues/new)
 
 ## About
 The application uses Nanopool's APIs and will save data in the NSUserDefaultsController. If you do not want to save your data, there is an option in preferences to do exactly that.

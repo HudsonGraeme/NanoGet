@@ -15,7 +15,12 @@ class MainView: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.Graph.scaleYEnabled = false
+        self.Graph.scaleXEnabled = false
+        self.Graph.rightAxis.enabled = false
+        self.Graph.leftAxis.enabled = false
+        self.Graph.xAxis.enabled = false
+        self.Graph.legend.enabled = false
         let Address =  UserDefaults.standard.string(forKey: "SSHAddress")
         let Port = UserDefaults.standard.integer(forKey: "SSHPort")
         let Username = UserDefaults.standard.string(forKey: "SSHUser")
@@ -47,9 +52,9 @@ class MainView: NSViewController {
             self.Lvl?.fillColor = .yellow
             LineColour = .yellow
         case "etn":
-            self.Lvl?.maxValue = 500
-            self.Lvl?.fillColor = .black
-            LineColour = .black
+            self.Lvl?.maxValue = 50000
+            self.Lvl?.fillColor = .systemGray
+            LineColour = .systemGray
         default:
             self.Lvl?.maxValue = 1
         }
@@ -74,7 +79,7 @@ class MainView: NSViewController {
             shell("ssh", "-p", "\(Port)", "\(Username)@\(Address)")
         }
         self.Graph?.drawGridBackgroundEnabled = true
-        self.Graph?.gridBackgroundColor = NSColor.gray
+        self.Graph?.gridBackgroundColor = NSColor.darkGray
         self.Graph?.autoScaleMinMaxEnabled = true
         _ = Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: #selector(DoAll), userInfo: self, repeats: true)
         _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(Update1s), userInfo: self, repeats: true)
@@ -89,6 +94,7 @@ class MainView: NSViewController {
     @IBOutlet weak var Graph: LineChartView!
     @IBOutlet weak var RefreshLabel: NSTextField!
     @IBOutlet weak var RefreshInd: NSProgressIndicator!
+    @IBOutlet weak var CalcHash: NSTextField!
     
     let coin = UserDefaults.standard.string(forKey: "Coin")
     var LineColour = NSColor.brown
@@ -97,9 +103,11 @@ class MainView: NSViewController {
     var i = 0
     var time : Double = 30
     var retry : Int = 0
+    var CalcHashRetry : Int = 0
+    var RepHashRetry : Int = 0
+    
     @objc func Update1s(timer: Timer?) {
         time -= 1
-        print(time)
         self.RefreshLabel?.stringValue = "Refreshing in \(time)"
         self.RefreshInd?.doubleValue = time
     }
@@ -140,7 +148,6 @@ class MainView: NSViewController {
             let data = response.data
             if(response.result.isSuccess) {
                 if let result = response.result.value {
-                    print(result)
                     let json = JSON(data: data!)
                     if(json["success"].intValue == 1) {
                         let usdvalue = json["ticker"]["price"].doubleValue
@@ -163,13 +170,12 @@ class MainView: NSViewController {
         }
     }
     
-    func GetBalance() -> Int{
+    func GetBalance() -> Int {
         let Address = UserDefaults.standard.string(forKey: "Acc")
         Alamofire.request("https://api.nanopool.org/v1/\(coin!)/balance/\(Address!)") .responseJSON { response in
             let data = response.data
             if(response.result.isSuccess) {
                 if let result = response.result.value {
-                    print(result)
                     let json = JSON(data: data!)
                     if(json["status"].intValue == 1) {
                         let money = json["data"].doubleValue
@@ -207,7 +213,6 @@ class MainView: NSViewController {
             let data = response.data
             if(response.result.isSuccess) {
                 if let result = response.result.value {
-                    print(result)
                     
                     let json = JSON(data: data!)
                     if(json["status"].intValue == 1) {
@@ -219,16 +224,28 @@ class MainView: NSViewController {
                             indRate = json["data"][i]["hashrate"].doubleValue
                             rate += indRate
                             i += 1
-                            print("\(i)   -   \(indRate)")
                         }
-                        self.RepHash?.stringValue = "\(rate)Mh/s Reported"
+                        if(self.RepHashRetry <= 2 && rate == 0) {
+                            self.GetReportedHash()
+                            self.RepHashRetry += 1
+                            print("Retry Reported \(self.RepHashRetry)")
+                        }
+                        else {
+                            self.RepHash?.stringValue = "\(rate)Mh/s Reported"
+                            self.RepHashRetry = 0
+                            }
                     }
                     else {
-                        print("Bad address")
-                        if(json["error"].stringValue != "") {
-                            self.RepHash?.stringValue = json["error"].stringValue
+                        if(self.RepHashRetry <= 2) {
+                            self.GetReportedHash()
+                            self.RepHashRetry += 1
+                            print("Retry Reported \(self.RepHashRetry)")
                         }
-                        
+                        else {
+                            if(json["error"].stringValue != "") {
+                                self.RepHash?.stringValue = json["error"].stringValue
+                            }
+                        }
                     }
                     
                 }
@@ -241,33 +258,36 @@ class MainView: NSViewController {
     
     func GetCalculatedHash() {
         let Address = UserDefaults.standard.string(forKey: "Acc")
-        Alamofire.request("https://api.nanopool.org/v1/\(self.coin!)/reportedhashrates/\(Address!)") .responseJSON { response in
+        Alamofire.request("https://api.nanopool.org/v1/\(self.coin!)/hashrate/\(Address!)") .responseJSON { response in
             let data = response.data
             if(response.result.isSuccess) {
                 if let result = response.result.value {
                     print(result)
                     
                     let json = JSON(data: data!)
-                    if(json["status"].intValue == 1) {
-                       
-                        var i = 0
-                        var rate = 0 as Double
-                        var indRate = 0 as Double
-                        while json["data"][i] != JSON.null {
-                            indRate = json["data"][i]["hashrate"].doubleValue
-                            rate += indRate
-                            i += 1
-                            print("\(i)   -   \(indRate)")
+                    if(json["status"].boolValue == true) {
+                        let rate = json["data"].doubleValue
+                        self.CalcHash?.stringValue = "\(rate)Mh/s Calculated"
+                        if(self.CalcHashRetry <= 2 && rate == 0) {
+                            self.GetCalculatedHash()
+                            self.CalcHashRetry += 1
+                            print("Calculated Retry \(self.CalcHashRetry)")
                         }
-                        self.RepHash?.stringValue = "\(rate)Mh/s Reported"
-                    
+                        else {
+                            self.CalcHashRetry = 0
+                            }
                     }
                     else {
-                        print("Bad address")
-                        if(json["error"].stringValue != "") {
-                            self.RepHash?.stringValue = json["error"].stringValue
+                        if(self.CalcHashRetry <= 2) {
+                            self.GetCalculatedHash()
+                            self.CalcHashRetry += 1
+                            print("Calculated Retry \(self.CalcHashRetry)")
                         }
-                        
+                        else {
+                        if(json["error"].stringValue != "") {
+                            self.CalcHash?.stringValue = json["error"].stringValue
+                        }
+                        }
                     }
                     
                 }
@@ -285,8 +305,6 @@ class MainView: NSViewController {
             let data = response.data
             if(response.result.isSuccess) {
                 if let result = response.result.value {
-                    print(result)
-                    
                     let json = JSON(data: data!)
                     if(json["status"].boolValue == true) {
                         print("Status good")
@@ -294,19 +312,21 @@ class MainView: NSViewController {
                         var rate = 0 as Double
                         var indRate = 0 as Double
                         while json["data"][i] != JSON.null {
-                            print("while \(i)")
                                 indRate = json["data"][i]["shares"].doubleValue
                                 let value = ChartDataEntry(x: Double(i), y: indRate)
                                 self.lineChartEntry.append(value)
-                                i += 4
+                                i += 1
                                 let line = LineChartDataSet(values: self.lineChartEntry, label: "Shares")
                             line.colors = [self.LineColour]
+                            line.mode = .cubicBezier
+                            line.fillColor = self.LineColour
+                            line.fillAlpha = 1
+                            line.drawFilledEnabled = true
+                            line.drawCirclesEnabled = false
                                 let chartdat = LineChartData()
                                 chartdat.addDataSet(line)
                                 self.Graph?.data = chartdat
-                                self.Graph?.chartDescription?.text = "Shares"
-                                print("\(i)   -   \(indRate)")
-                            
+                            self.Graph?.chartDescription?.enabled = false
                         }
                         self.RepHash?.stringValue = "\(rate)Mh/s Reported"
                        

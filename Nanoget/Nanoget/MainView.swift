@@ -315,7 +315,7 @@ class MainView: NSViewController {
                                 indRate = json["data"][i]["shares"].doubleValue
                                 let value = ChartDataEntry(x: Double(i), y: indRate)
                                 self.lineChartEntry.append(value)
-                                i += 1
+                                i += 10
                                 let line = LineChartDataSet(values: self.lineChartEntry, label: "Shares")
                             line.colors = [self.LineColour]
                             line.mode = .cubicBezier
